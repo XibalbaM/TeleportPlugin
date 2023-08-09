@@ -1,0 +1,42 @@
+name: TeleportPlugin
+version: '${project.version}'
+main: fr.xibalba.teleportplugin.TeleportPlugin
+api-version: '1.18'
+permissions:
+  teleport-plugin.tplocation.teleport:
+    description: Teleport to a location
+    default: true
+  teleport-plugin.tplocation.create:
+    description: Create a location
+    default: op
+  teleport-plugin.tplocation.delete:
+    description: Delete a location
+    default: op
+  teleport-plugin.tplocation.reset:
+    description: List all locations
+    default: op
+commands:
+  tplocation:
+    description: Teleport to a location
+    aliases:
+      - tpl
+      - tplocation
+    permission: teleport-plugin.tplocation.teleport
+  tplocation-create:
+    description: Create a location
+    aliases:
+      - tplc
+      - tplocation-create
+    permission: teleport-plugin.tplocation.create
+  tplocation-delete:
+    description: Delete a location
+    aliases:
+      - tpld
+      - tplocation-delete
+    permission: teleport-plugin.tplocation.delete
+  tplocation-reset:
+    description: Clear all locations
+    aliases:
+      - tplr
+      - tplocation-reset
+    permission: teleport-plugin.tplocation.reset
